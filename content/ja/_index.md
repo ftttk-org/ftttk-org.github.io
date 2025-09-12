@@ -10,7 +10,7 @@ url: /
 訓練について <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/join/full-time">
-参加方法 <i class="fab fa-github ms-2 "></i>
+参加方法 <i class="fas fa-user-plus ms-2"></i>
 </a>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}

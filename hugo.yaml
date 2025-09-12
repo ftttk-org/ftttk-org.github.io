@@ -127,7 +127,7 @@ params:
 
   copyright:
     authors: "〒162-0041 東京都新宿区早稲田鶴巻町540　キリン1stビル5階 TEL: 03-6457-3491"
-    from_year: 2025
+#    from_year: 2025
 
   # User interface configuration
   ui:
