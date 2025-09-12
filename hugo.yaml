@@ -216,3 +216,6 @@ module:
 #      name: 資料
 #      url: /resources/
 #      weight: 50
+caches:
+  images:
+    dir: :cacheDir/images
