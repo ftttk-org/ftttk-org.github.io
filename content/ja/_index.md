@@ -5,15 +5,14 @@ url: /
 ---
 
 {{< blocks/cover title="東京全時間訓練" image_anchor="top" height="full" >}}
-<div class="mx-auto">
-	<a class="btn btn-lg btn-primary mr-3 mb-4" href="/about-training/">
-		訓練について <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-	</a>
-	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="/join-full-time/">
-		参加方法 <i class="fas fa-info-circle ml-2"></i>
-	</a>
-	<p class="lead mt-5">キリストのからだの実際のために</p>
-</div>
+<p class="lead mt-4">Full-time Training in Tokyo</p>
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/training/intro">
+訓練について <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+</a>
+<a class="btn btn-lg btn-secondary me-3 mb-4" href="/join/full-time">
+参加方法 <i class="fab fa-github ms-2 "></i>
+</a>
+{{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
 
 {{< blocks/section >}}
@@ -22,7 +21,7 @@ url: /
   <p class="lead">
     訓練の八つの面は、訓練生がキリストのからだの実際のために備えられるための重要な要素です。
   </p>
-  <a class="btn btn-lg btn-primary" href="/eight-aspects/">もっと詳しく</a>
+  <a class="btn btn-lg btn-primary" href="/training/eight-aspects/">もっと詳しく</a>
 </div>
 {{< /blocks/section >}}
 
@@ -59,7 +58,7 @@ url: /
 
 {{< blocks/section >}}
 <div class="col-12 text-center">
-  <a class="btn btn-lg btn-primary" href="/join-full-time/">2026年度(22期生) 全時間訓練申し込み</a>
+  <a class="btn btn-lg btn-primary" href="/join/full-time/">2026年度(22期生) 全時間訓練申し込み</a>
   <h3 class="mt-5">フォローする</h3>
   <ul class="list-inline h3">
     <li class="list-inline-item"><a href="https://lin.ee/Px1T9JN"><i class="fab fa-line"></i></a></li>
