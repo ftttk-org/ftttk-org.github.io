@@ -1,0 +1,29 @@
+{{ $count := .Get "count" | default 3 }}
+{{ $pages := where site.RegularPages "Section" "blog" }}
+{{ $pages = $pages | first $count }}
+
+<div class="recent-posts">
+  {{ range $pages }}
+  <div class="recent-post-item mb-4 p-3 border rounded">
+    {{ with .Params.categories }}
+    <div class="category-badge mb-2">
+      {{ range . }}<span class="badge bg-primary">【{{ . }}】</span>{{ end }}
+    </div>
+    {{ end }}
+    
+    <h5 class="post-title mb-2">
+      <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark">{{ .Title }}</a>
+    </h5>
+    
+    {{ with .Description }}
+    <p class="post-excerpt text-muted mb-2">{{ . }}</p>
+    {{ else }}
+    <p class="post-excerpt text-muted mb-2">{{ .Summary | truncate 120 }}</p>
+    {{ end }}
+    
+    <div class="post-meta text-muted small">
+      {{ with .Date }}{{ .Format "2006年1月2日" }}{{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
