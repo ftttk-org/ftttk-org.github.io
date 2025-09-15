@@ -3,7 +3,7 @@ title: "リソース / メディア"
 menu: {main: {weight: 40}}
 ---
 
-{{% blocks/cover title="リソース一覧" image_anchor="center" height="auto" %}}
+{{% blocks/cover height="auto" %}}
 訓練に関する様々なリソースやメディアを以下のページでご覧いただけます。
 {{% /blocks/cover %}}
 
