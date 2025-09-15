@@ -39,7 +39,7 @@ weight: 10
 {{% blocks/section color="light" %}}
 ### ⚫︎必要資料
 
-[**「全時間訓練案内状」**](/wp-content/uploads/ftttk_recruiting_ann_2022.pdf)
+[**「全時間訓練案内状」**](/wp-content/uploads/ftttk_recruiting_ann_2025.pdf)
 
 [**「全時間訓練申込書」**](/wp-content/uploads/ftttk_recruiting_application_2022.pdf)
 
