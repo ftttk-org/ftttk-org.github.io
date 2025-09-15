@@ -1,7 +1,14 @@
 {{ define "main" -}}
 <div class="td-content">
-  <h1>Not found</h1>
-  <p>Oops! This page doesn't exist. Try going back to the <a href="{{ "" | relURL }}">home page</a>.</p>
-  <p>You can learn how to make a 404 page like this in <a href="https://gohugo.io/templates/404/">Custom 404 Pages</a>.</p>
+  <div class="text-center">
+    <h1 class="display-1 fw-bold">404</h1>
+    <p class="fs-3">
+      ページが見つかりません。
+    </p>
+    <p class="lead">
+      お探しのページは存在しないか、移動または削除された可能性があります。
+    </p>
+    <a href="{{ "" | relURL }}" class="btn btn-primary">トップページへ戻る</a>
+  </div>
 </div>
 {{- end }}

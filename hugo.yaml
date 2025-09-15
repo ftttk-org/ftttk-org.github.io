@@ -1,4 +1,4 @@
-baseURL: https://ftttk-org.github.io
+baseURL: "/"
 title: 東京全時間訓練
 
 # cSpell:ignore goldmark github hugo readingtime docsy subdir lastmod pygments linenos catmullrom norsk gu

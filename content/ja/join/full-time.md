@@ -45,7 +45,7 @@ weight: 10
 
 [**「長老・責任者の推薦書」**](/wp-content/uploads/ftttk_recruiting_recommendation_2022.pdf)
 
-[**「証しの记入用紙」**](/wp-content/uploads/ftttk_recruiting_testimony.doc)
+[**「証しの记入用紙」**](/wp-content/uploads/ftttk_recruiting_testimony.pdf)
 
-[**「献身同意書」**](/wp-content/uploads/ftttk_recruiting_rdedication.doc)
+[**「献身同意書」**](/wp-content/uploads/ftttk_recruiting_rdedication.pdf)
 {{% /blocks/section %}}

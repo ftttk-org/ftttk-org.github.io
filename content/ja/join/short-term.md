@@ -20,5 +20,5 @@ weight: 20
 {{% blocks/section color="light" %}}
 申し込みは下記の書類を印刷した後、記入して地元の責任者または長老にお渡しください。JGWに送る用に手配してください。JGWへは、 [ftttk@jgw.or.jp](mailto:ftttk@jgw.or.jp) にメールにて、あるいは郵送にて提出するようにしてください。
 
-[短期訓練参加の申込み用紙をダウンロード](/wp-content/uploads/ftttk_short_term_application.doc)
+[短期訓練参加の申込み用紙をダウンロード](/wp-content/uploads/ftttk_short_term_application.pdf)
 {{% /blocks/section %}}
