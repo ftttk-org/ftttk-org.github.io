@@ -7,7 +7,7 @@ menu: {main: {weight: 40}}
 訓練に関する様々なリソースやメディアを以下のページでご覧いただけます。
 {{% /blocks/cover %}}
 
-{{% blocks/section %}}
+{{% blocks/section color="white" %}}
 <div class="col-12">
 <div class="row">
   <div class="col-md-4 mb-4 text-center">

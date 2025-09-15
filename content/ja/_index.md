@@ -4,6 +4,7 @@ linkTitle: "Home"
 url: /
 ---
 
+<div class="d-none d-lg-block">
 {{< blocks/cover title="FTTTK 東京全時間訓練" image_anchor="top" height="full" >}}
 <p class="lead mt-4">Full-time Training in Tokyo</p>
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/training/intro">
@@ -11,8 +12,19 @@ url: /
 </a>
 {{< blocks/link-down color="info" >}}
 {{< /blocks/cover >}}
+</div>
 
-{{< blocks/section >}}
+<div class="d-lg-none">
+{{< blocks/cover title="FTTTK 東京全時間訓練" image_anchor="top" height="min" >}}
+<p class="lead mt-4">Full-time Training in Tokyo</p>
+<a class="btn btn-lg btn-primary me-3 mb-4" href="/training/intro">
+全時間訓練とは？ <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+</a>
+{{< blocks/link-down color="info" >}}
+{{< /blocks/cover >}}
+</div>
+
+{{< blocks/section color="primary" >}}
 <div class="col-12 text-center">
   <h2 class="h1 mb-4">訓練の八つの面</h2>
   <p class="lead mb-4">
@@ -22,14 +34,14 @@ url: /
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section >}}
+{{< blocks/section color="white" >}}
 <div class="col-12 text-center">
   <h2>FTTTK 東京全時間訓練</h2>
   {{< youtube S-VBuGJ6kDc >}}
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section >}}
+{{< blocks/section color="white" >}}
 <div class="row">
   <div class="col-lg-6">
     <h2>更新情報</h2>
@@ -56,7 +68,7 @@ url: /
 </div>
 {{< /blocks/section >}}
 
-{{< blocks/section >}}
+{{< blocks/section color="white" >}}
 <div class="col-12 text-center">
   <a class="btn btn-lg btn-primary" href="/join/full-time/">2026年度(22期生) 全時間訓練申し込み</a>
   <h3 class="mt-5">フォローする</h3>
