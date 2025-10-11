@@ -1,14 +1,12 @@
-{{ define "main" -}}
-<div class="td-content">
-  <div class="text-center">
-    <h1 class="display-1 fw-bold">404</h1>
-    <p class="fs-3">
-      ページが見つかりません。
-    </p>
-    <p class="lead">
-      お探しのページは存在しないか、移動または削除された可能性があります。
-    </p>
-    <a href="{{ "" | relURL }}" class="btn btn-primary">トップページへ戻る</a>
-  </div>
+{{ define "main" }}
+
+<div class="container" style="padding: 8rem 0; text-align: center;">
+  <h1 style="font-size: 6rem; font-weight: 900; color: var(--primary-color);">404</h1>
+  <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">ページが見つかりません</h2>
+  <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">
+    お探しのページは存在しないか、移動または削除された可能性があります。
+  </p>
+  <a href="{{ "/" | relURL }}" class="btn btn-primary">トップページへ戻る</a>
 </div>
-{{- end }}
+
+{{ end }}

@@ -1,0 +1,90 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="home-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">東京全時間訓練</h1>
+        <p class="hero-subtitle">Full-time Training in Tokyo</p>
+        <p class="hero-description">主を知り主に奉仕するために訓練される場所</p>
+        <div class="hero-buttons">
+            <a href="/training/intro/" class="btn-hero btn-primary">全時間訓練とは？</a>
+            <a href="/join/short-term/" class="btn-hero btn-secondary">特別短期訓練募集中</a>
+        </div>
+    </div>
+</section>
+
+<!-- Quote Intro Section - Full Width -->
+<section class="home-section section-quote-intro">
+    <div class="quote-intro-fullwidth">
+        <p class="quote-intro-text">
+            全時間訓練は、神学校や聖書学校ではなく、青年のクリスチャンたちが来て、キリストを追い求め、正常な方法でキリストを生きることを学ぶ場所です。
+        </p>
+    </div>
+</section>
+
+<!-- Quote Detail Section -->
+<section class="home-section section-quote">
+    <div class="section-container">
+        <div class="quote-card">
+            <blockquote class="quote-main">
+                <p class="quote-text">
+                    主を知り主に奉仕するために訓練される時間を取っておくことは、実に大きな祝福です。わたしは、彼らが訓練を通して養われ装備された後、全時間奉仕をしようと、就職しようと、何の問題もないと思います。なぜなら、彼らは装備された後、主の回復にあって、もはや一般的なクリスチャンではなく、ありふれたクリスチャンでさえないからです。彼らは訓練され、装備されており、主の負担を受けています。これは彼らの全生涯に影響を及ぼすでしょう。……この展望から、全時間訓練の中であなたの人生の最高の時を費やすことは真に価値があります。
+                </p>
+                <footer class="quote-footer">神のエコノミーと神聖な三一の伝達の奥義、第11章</footer>
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<!-- Video Section -->
+<section class="home-section section-video">
+    <div class="section-container">
+        <h2 class="section-title">東京全時間訓練紹介動画（7分）</h2>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://www.youtube-nocookie.com/embed/S-VBuGJ6kDc?rel=0&modestbranding=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Updates Section -->
+<section class="home-section section-updates">
+    <div class="section-container">
+        <h2 class="section-title">更新情報</h2>
+        <div class="updates-list-container">
+            <div class="updates-card">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Posts Section -->
+<section class="home-section section-recent-posts">
+    <div class="section-container">
+        <h2 class="section-title">新着記事</h2>
+        <div class="recent-posts">
+            {{ range where .Site.RegularPages "Section" "testimonies" | first 3 }}
+            <article class="recent-post-card">
+                <h3 class="post-title">
+                    <a href="{{ .Permalink }}">
+                        {{ if .Parent }}
+                            【{{ .Parent.Title }}】
+                        {{ end }}
+                        {{ .Title }}
+                    </a>
+                </h3>
+                <p class="post-excerpt">{{ .Summary | plainify | truncate 100 }}</p>
+                <time class="post-date">{{ .Date.Format "2006年1月2日" }}</time>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

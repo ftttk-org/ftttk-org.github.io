@@ -1,0 +1,289 @@
+<style>
+  .filter-section {
+    margin-bottom: 2rem;
+  }
+  .filter-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+  }
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    background: var(--entry);
+    color: var(--content);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+  }
+  .filter-btn:hover {
+    background: var(--hljs-bg);
+    border-color: var(--primary);
+  }
+  .filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  .post-item {
+    padding: 1.2rem;
+    transition: background 0.2s;
+  }
+  .post-item:hover {
+    background: var(--code-bg);
+  }
+  .post-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.3rem;
+    border: none;
+  }
+  .post-title:hover {
+    text-decoration: underline;
+  }
+  .post-meta {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    border: none;
+    padding-top: 0;
+  }
+  .post-tag-btn {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    background: #e8f0fe;
+    border: none;
+    border-radius: 8px;
+    color: #5f6368;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .post-tag-btn:hover {
+    background: #d2e3fc;
+    color: #1a73e8;
+  }
+  .no-results {
+    padding: 2rem;
+    text-align: center;
+    color: var(--secondary);
+  }
+</style>
+
+<div class="filter-section">
+  <h3 class="filter-title">カテゴリ</h3>
+  <div id="category-filters" class="filter-buttons"></div>
+
+  <h3 class="filter-title">タグ</h3>
+  <div id="tag-filters" class="filter-buttons"></div>
+</div>
+
+<div id="post-list"></div>
+
+<script>
+async function initFilter() {
+  const res = await fetch('/index.json');
+  // カテゴリまたはタグがある記事だけをフィルタリング
+  const posts = (await res.json()).filter(p => 
+    (p.categories && p.categories.length > 0) || (p.tags && p.tags.length > 0)
+  );
+
+  // カテゴリーの表示順を指定
+  const categoryOrder = ['召された証し', '訓練生活の証し', '同労者の励まし', '八方面の証し'];
+  const allCategories = [...new Set(posts.flatMap(p => p.categories || []))];
+  const categories = categoryOrder.filter(cat => allCategories.includes(cat));
+  
+  const tags = [...new Set(posts.flatMap(p => p.tags || []))].sort();
+
+  const selected = { categories: new Set(['召された証し']), tags: new Set() };
+  const postContainer = document.getElementById('post-list');
+
+  const createButton = (name, type, count) => {
+    const btn = document.createElement('button');
+    btn.textContent = `${name} (${count})`;
+    btn.className = 'filter-btn';
+    btn.onclick = () => toggleSelection(name, type, btn);
+    // デフォルト選択状態を反映
+    if (type === 'categories' && name === '召された証し') {
+      btn.classList.add('active');
+    }
+    return btn;
+  };
+
+  function renderButtons(containerId, list, type) {
+    const container = document.getElementById(containerId);
+    list.forEach(name => {
+      const count = posts.filter(p => (p[type] || []).includes(name)).length;
+      container.appendChild(createButton(name, type, count));
+    });
+  }
+
+  renderButtons('category-filters', categories, 'categories');
+  updateTagButtons();
+  
+  // 初期表示時に「召された証し」でフィルタリング
+  applyFilters();
+
+  function updateTagButtons() {
+    // カテゴリーで絞り込まれた記事を取得
+    let filteredPosts = posts;
+    if (selected.categories.size > 0) {
+      filteredPosts = posts.filter(p => 
+        [...selected.categories].every(c => (p.categories || []).includes(c))
+      );
+    }
+    
+    // 絞り込まれた記事が持っているタグだけを抽出
+    const availableTags = [...new Set(filteredPosts.flatMap(p => p.tags || []))].sort();
+    
+    // タグボタンを再レンダリング
+    const tagContainer = document.getElementById('tag-filters');
+    tagContainer.innerHTML = '';
+    availableTags.forEach(tag => {
+      const count = filteredPosts.filter(p => (p.tags || []).includes(tag)).length;
+      const btn = createButton(tag, 'tags', count);
+      if (selected.tags.has(tag)) {
+        btn.classList.add('active');
+      }
+      tagContainer.appendChild(btn);
+    });
+  }
+
+  function toggleSelection(name, type, btn) {
+    const set = selected[type];
+    
+    // カテゴリーの場合：選択解除を許可しない（常に1つ選択）
+    if (type === 'categories') {
+      if (set.has(name)) {
+        // 既に選択されている場合は何もしない
+        return;
+      }
+      // 他のすべてのボタンの選択を解除
+      set.clear();
+      document.querySelectorAll('#category-filters .filter-btn').forEach(b => {
+        b.classList.remove('active');
+      });
+      // 新しい選択を追加
+      set.add(name);
+      btn.classList.add('active');
+      
+      // タグの選択をクリアしてボタンを更新
+      selected.tags.clear();
+      updateTagButtons();
+    } else {
+      // タグの場合：選択解除可能
+      if (set.has(name)) {
+        set.delete(name);
+        btn.classList.remove('active');
+      } else {
+        set.clear();
+        document.querySelectorAll('#tag-filters .filter-btn').forEach(b => {
+          b.classList.remove('active');
+        });
+        set.add(name);
+        btn.classList.add('active');
+      }
+    }
+    
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const filtered = posts.filter(p => {
+      // カテゴリーのフィルタ（単一選択）
+      const catMatch = selected.categories.size === 0 ||
+        [...selected.categories].every(c => (p.categories || []).includes(c));
+      
+      // タグのフィルタ（単一選択）
+      const tagMatch = selected.tags.size === 0 ||
+        [...selected.tags].every(t => (p.tags || []).includes(t));
+      
+      return catMatch && tagMatch;
+    });
+    renderPosts(filtered);
+  }
+
+  function renderPosts(list) {
+    postContainer.innerHTML = '';
+    if (list.length === 0) {
+      postContainer.innerHTML = '<div class="no-results">該当する記事はありません。</div>';
+      return;
+    }
+    
+    // slugの降順でソート
+    const sortedList = [...list].sort((a, b) => {
+      const slugA = a.permalink.split('/').filter(Boolean).pop() || '';
+      const slugB = b.permalink.split('/').filter(Boolean).pop() || '';
+      return slugB.localeCompare(slugA);
+    });
+    
+    sortedList.forEach(p => {
+      const div = document.createElement('div');
+      div.className = 'post-item';
+      
+      // タイトル
+      const titleLink = document.createElement('a');
+      titleLink.href = p.permalink;
+      titleLink.className = 'post-title';
+      titleLink.textContent = p.title;
+      div.appendChild(titleLink);
+      
+      // タグ（クリック可能）
+      if (p.tags && p.tags.length > 0) {
+        const tagContainer = document.createElement('div');
+        tagContainer.className = 'post-meta';
+        
+        p.tags.forEach((tag, index) => {
+          const tagBtn = document.createElement('button');
+          tagBtn.textContent = '#' + tag;
+          tagBtn.className = 'post-tag-btn';
+          tagBtn.onclick = (e) => {
+            e.preventDefault();
+            selectTag(tag);
+          };
+          tagContainer.appendChild(tagBtn);
+        });
+        
+        div.appendChild(tagContainer);
+      }
+      
+      postContainer.appendChild(div);
+    });
+  }
+  
+  function selectTag(tagName) {
+    // タグを選択
+    selected.tags.clear();
+    selected.tags.add(tagName);
+    
+    // タグボタンの状態を更新
+    document.querySelectorAll('#tag-filters .filter-btn').forEach(btn => {
+      if (btn.textContent.includes(tagName)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    
+    applyFilters();
+  }
+}
+
+initFilter();
+</script>
+

@@ -1,0 +1,12 @@
+{{- $title := .Get "title" -}}
+{{- $height := .Get "height" | default "auto" -}}
+{{- $imageAnchor := .Get "image_anchor" | default "center" -}}
+
+<section class="hero blocks-cover" style="padding: 4rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; min-height: {{ if eq $height "full" }}100vh{{ else if eq $height "min" }}400px{{ else }}auto{{ end }};">
+    <div class="hero-content container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        {{ with $title }}<h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1.5rem; font-weight: 700;">{{ . }}</h1>{{ end }}
+        <div style="font-size: 1.25rem; line-height: 1.7;">
+            {{ .Inner | markdownify }}
+        </div>
+    </div>
+</section>

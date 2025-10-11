@@ -1,0 +1,19 @@
+{{- $color := .Get "color" | default "white" -}}
+
+{{- $bgColor := "" -}}
+{{- if eq $color "primary" -}}
+    {{- $bgColor = "background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;" -}}
+{{- else if eq $color "light" -}}
+    {{- $bgColor = "background: #f9fafb;" -}}
+{{- else if eq $color "dark" -}}
+    {{- $bgColor = "background: #1f2937; color: white;" -}}
+{{- else -}}
+    {{- $bgColor = "background: white;" -}}
+{{- end -}}
+
+<section class="blocks-section" style="padding: 4rem 0; {{ $bgColor }}">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+        {{ .Inner }}
+    </div>
+</section>
+
