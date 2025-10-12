@@ -1,9 +1,9 @@
-# Hugo build configuration for Netlify
-# (https://gohugo.io/hosting-and-deployment/hosting-on-netlify/#configure-hugo-version-in-netlify)
+# Hugo build configuration for GitHub Pages
+# (https://gohugo.io/hosting-and-deployment/hosting-on-github-pages/)
 
 [build]
-command = "npm run build:preview"
+command = "hugo --minify"
 publish = "public"
 
 [context.production]
-command = "npm run build:production"
+command = "hugo --minify"
