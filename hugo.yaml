@@ -126,4 +126,6 @@ privacy:
     privacyEnhanced: true
 
 # For Git Actions
+staticDir:
+  - static
 publishDir: "docs"
