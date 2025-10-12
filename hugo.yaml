@@ -124,3 +124,6 @@ caches:
 privacy:
   youtube:
     privacyEnhanced: true
+
+# For Git Actions
+publishDir: "docs"
