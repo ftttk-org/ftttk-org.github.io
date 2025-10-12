@@ -128,4 +128,4 @@ privacy:
 # For Git Actions
 staticDir:
   - static
-publishDir: "docs"
+publishDir: "public"
