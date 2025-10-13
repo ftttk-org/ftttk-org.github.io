@@ -1,0 +1,124 @@
+{{- $page := .Page -}}
+{{- $headings := slice -}}
+
+{{- range $page.Pages -}}
+  {{- if .Title -}}
+    {{- $headings = $headings | append (dict "title" .Title "url" .RelPermalink "level" 1) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $headings -}}
+<div class="toc-container">
+  <h3>目次</h3>
+  <ul class="toc-list">
+    {{- range $headings -}}
+    <li class="toc-item toc-level-{{ .level }}">
+      <a href="{{ .url }}" class="toc-link">{{ .title }}</a>
+    </li>
+    {{- end -}}
+  </ul>
+</div>
+
+<style>
+.toc-container {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toc-container h3 {
+  margin: 0 0 1rem 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc-item {
+  margin: 0.5rem 0;
+}
+
+.toc-item.toc-level-1 {
+  margin-left: 0;
+}
+
+.toc-item.toc-level-2 {
+  margin-left: 1rem;
+}
+
+.toc-item.toc-level-3 {
+  margin-left: 2rem;
+}
+
+.toc-link {
+  color: var(--content);
+  text-decoration: none;
+  display: block;
+  padding: 0.3rem 0;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.toc-link:hover {
+  color: var(--primary);
+  background: var(--code-bg);
+  padding-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .toc-container {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .toc-container h3 {
+    font-size: 1.1rem;
+  }
+  
+  .toc-item.toc-level-2 {
+    margin-left: 0.5rem;
+  }
+  
+  .toc-item.toc-level-3 {
+    margin-left: 1rem;
+  }
+}
+</style>
+{{- else -}}
+<div class="toc-container">
+  <h3>目次</h3>
+  <p class="toc-empty">目次がありません</p>
+</div>
+
+<style>
+.toc-container {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toc-container h3 {
+  margin: 0 0 1rem 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.toc-empty {
+  color: var(--secondary);
+  font-style: italic;
+  margin: 0;
+}
+</style>
+{{- end -}}
