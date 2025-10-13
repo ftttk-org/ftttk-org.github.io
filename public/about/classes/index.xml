@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>クラスの紹介 on 東京全時間訓練</title>
+    <link>http://localhost:54044/about/classes/</link>
+    <description>Recent content in クラスの紹介 on 東京全時間訓練</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>ja</language>
+    <atom:link href="http://localhost:54044/about/classes/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

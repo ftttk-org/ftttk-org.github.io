@@ -1,0 +1,176 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{- /* カスタムパンクリスト */ -}}
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="/" class="breadcrumb-link">Home</a>
+        </li>
+        {{- if eq .Section "about" }}
+          <li class="breadcrumb-item">
+            <a href="/about/" class="breadcrumb-link">訓練について</a>
+          </li>
+          {{- if eq .Title "訓練の由来と目的" }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">訓練の由来と目的</li>
+          {{- else if eq .Title "訓練の八つの方面" }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">訓練の八つの方面</li>
+          {{- else if eq .Title "クラスの紹介" }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">クラスの紹介</li>
+          {{- else if eq .Title "訓練の生活" }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">訓練の生活</li>
+          {{- else }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ .Title }}</li>
+          {{- end }}
+        {{- else if eq .Section "admission" }}
+          <li class="breadcrumb-item">
+            <a href="/admission/" class="breadcrumb-link">訓練への参加</a>
+          </li>
+          {{- if ne .IsHome true }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ .Title }}</li>
+          {{- end }}
+        {{- else if eq .Section "testimonies" }}
+          <li class="breadcrumb-item">
+            <a href="/testimonies/" class="breadcrumb-link">恵みの証し</a>
+          </li>
+          {{- if ne .IsHome true }}
+            {{- if .Params.categories }}
+              {{- $category := index .Params.categories 0 | string }}
+              {{- $categoryLabels := dict "召された証し" "召された証し" "訓練生活の証し" "訓練生活の証し" "訓練の八つの方面" "訓練の八つの方面" "良き地の展覧" "良き地の展覧" }}
+              {{- $categoryLabel := index $categoryLabels $category | default $category }}
+              {{- $categoryPaths := dict "召された証し" "calling" "訓練生活の証し" "training-life" "訓練の八つの方面" "eight-aspects" "良き地の展覧" "good-land" }}
+              {{- $categoryPath := index $categoryPaths $category | default ($category | urlize) }}
+              <li class="breadcrumb-item">
+                <a href="/testimonies/{{ $categoryPath }}/" class="breadcrumb-link">{{ $categoryLabel }}</a>
+              </li>
+            {{- end }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ .Title }}</li>
+          {{- end }}
+        {{- else if eq .Section "resources" }}
+          <li class="breadcrumb-item">
+            <a href="/resources/" class="breadcrumb-link">リソース</a>
+          </li>
+          {{- if ne .IsHome true }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ .Title }}</li>
+          {{- end }}
+        {{- else }}
+          {{- if ne .IsHome true }}
+            <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ .Title }}</li>
+          {{- end }}
+        {{- end }}
+      </ol>
+    </nav>
+
+    {{- /* H1を削除し、代わりにパンクリストの最後の項目をタイトルとして表示 */ -}}
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+<style>
+.breadcrumb-nav {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+.breadcrumb-link {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+.breadcrumb-current {
+  color: #333;
+  font-weight: 500;
+}
+
+.post-description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-list {
+    font-size: 0.85rem;
+  }
+  
+  .breadcrumb-item:not(:last-child)::after {
+    margin: 0 0.3rem;
+  }
+}
+</style>
+
+{{- end }}{{/* end main */}}
+

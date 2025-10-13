@@ -77,7 +77,7 @@ params:
   
   # ヘッダー設定
   label:
-    text: "site-logo"
+    text: ""
     icon: /images/site-logo.png
     iconHeight: 35
     
@@ -100,13 +100,13 @@ module:
 
 menu:
   main:
-    - identifier: training
+    - identifier: about
       name: 訓練について
-      url: /training/
+      url: /about/
       weight: 10
-    - identifier: join
+    - identifier: admission
       name: 訓練への参加
-      url: /join/
+      url: /admission/
       weight: 20
     - identifier: testimonies
       name: 恵みの証し
@@ -128,4 +128,4 @@ privacy:
 # For Git Actions
 staticDir:
   - static
-publishDir: "public"
+publishDir: "docs"

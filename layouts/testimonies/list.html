@@ -6,22 +6,22 @@
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
-  <h1>
-    {{ .Title }}
-    {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
-    {{- with .OutputFormats.Get "rss" }}
-    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" height="23">
-        <path d="M4 11a9 9 0 0 1 9 9" />
-        <path d="M4 4a16 16 0 0 1 16 16" />
-        <circle cx="5" cy="19" r="1" />
-      </svg>
-    </a>
-    {{- end }}
-    {{- end }}
-  </h1>
+  {{- /* カスタムパンクリスト */ -}}
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item">
+        <a href="/" class="breadcrumb-link">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="/testimonies/" class="breadcrumb-link">恵みの証し</a>
+      </li>
+      {{- if ne .RelPermalink "/testimonies/" }}
+        {{- $categoryLabels := dict "calling" "召された証し" "training-life" "訓練生活の証し" "eight-aspects" "訓練の八つの方面" "good-land" "良き地の展覧" }}
+        {{- $categoryLabel := index $categoryLabels .Section | default .Title }}
+        <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ $categoryLabel }}</li>
+      {{- end }}
+    </ol>
+  </nav>
   {{- if .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
@@ -79,6 +79,13 @@
       </span>
       {{- end }}
     </h2>
+    {{- if .Content }}
+    <div class="entry-lead">
+      {{- $leadText := .Content | plainify | htmlUnescape | replaceRE "\n" " " | replaceRE "\r" " " | replaceRE "\\s+" " " | strings.TrimSpace }}
+      {{- $leadText = $leadText | truncate 100 }}
+      <p>{{ $leadText }}</p>
+    </div>
+    {{- end }}
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
@@ -118,6 +125,121 @@
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}
+
+<style>
+.breadcrumb-nav {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+.breadcrumb-link {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+.breadcrumb-current {
+  color: #333;
+  font-weight: 500;
+}
+
+.post-description {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.entry-lead {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.entry-lead p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* testimonies記事カードのスタイル */
+.post-entry {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.entry-header h2 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.entry-content {
+  margin-top: 1rem;
+}
+
+.entry-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-list {
+    font-size: 0.85rem;
+  }
+  
+  .breadcrumb-item:not(:last-child)::after {
+    margin: 0 0.3rem;
+  }
+  
+  .entry-lead p {
+    font-size: 0.85rem;
+  }
+  
+  .post-entry {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+  }
+}
+</style>
 
 {{- end }}{{- /* end main */ -}}
 

@@ -1,28 +1,133 @@
 <style>
   .filter-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    background: var(--code-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
   }
-  .filter-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.8rem;
+  
+  .filter-section-title {
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--primary);
+    margin: 0 0 0.8rem 0;
   }
-  .filter-buttons {
+  
+  .category-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+  }
+  
+  .category-btn {
+    padding: 0.4rem 0.3rem;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(102, 126, 234, 0.2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .category-btn:hover {
+    background: linear-gradient(135deg, rgba(90, 103, 216, 0.5) 0%, rgba(107, 70, 193, 0.5) 100%);
+    color: #1f2937;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+  }
+  
+  .category-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 3px 6px rgba(102, 126, 234, 0.5);
+  }
+  
+  .mobile-category-buttons {
+    display: none; /* デフォルトで非表示（PCサイト用） */
+  }
+  
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 1.5rem 0;
+    position: relative;
+  }
+  
+  .divider::after {
+    content: "タグ";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--code-bg);
+    padding: 0 0.8rem;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 500;
+  }
+  
+  /* デスクトップ用：モバイル要素を非表示 */
+  .mobile-category-select,
+  .tags-accordion-header,
+  .tags-accordion-content {
+    display: none;
+  }
+  
+  .popular-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    min-height: 2rem; /* 最低1行分の高さを維持 */
+    align-items: flex-start;
   }
+  
+  .popular-tags:empty::before {
+    content: "タグがありません";
+    color: var(--secondary);
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.7;
+  }
+  
+  .tag-chip {
+    padding: 0.15rem 0.5rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    color: #374151;
+    font-size: 0.7rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .tag-chip.active {
+    background: black;
+    color: white;
+    border-color: black;
+  }
+  
   .filter-btn {
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--border);
-    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
     background: var(--entry);
     color: var(--content);
     cursor: pointer;
     transition: all 0.2s ease;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    font-weight: 500;
   }
   .filter-btn:hover {
     background: var(--hljs-bg);
@@ -83,14 +188,123 @@
     text-align: center;
     color: var(--secondary);
   }
+  
+  /* モバイル対応 */
+  @media (max-width: 768px) {
+    .category-buttons {
+      display: none; /* デスクトップ用ボタンを非表示 */
+    }
+    
+  .mobile-category-buttons {
+    display: flex; /* モバイルで表示 */
+    flex-wrap: nowrap;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+  }
+    
+    .mobile-category-btn {
+      flex: 1;
+      padding: 0.4rem 0.2rem;
+      font-size: 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--entry);
+      color: var(--content);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .mobile-category-btn:hover {
+      background: rgba(var(--primary-rgb), 0.1);
+      border-color: var(--primary);
+    }
+    
+    .mobile-category-btn.active {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-color: var(--primary);
+    }
+    
+    .tags-accordion {
+      display: none; /* モバイル用アコーディオンを非表示 */
+    }
+    
+    .popular-tags {
+      margin-top: 0;
+      min-height: auto;
+    }
+    
+    .tag-chip {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+    }
+    
+    .filter-section {
+      padding: 0.8rem;
+    }
+    
+    .divider {
+      display: none; /* モバイルでは仕切り線を非表示 */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .filter-section {
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+    }
+    
+    .category-btn {
+      padding: 0.3rem 0.1rem;
+      font-size: 0.75rem;
+    }
+    
+    .tag-chip {
+      font-size: 0.6rem;
+      padding: 0.08rem 0.3rem;
+    }
+    
+    .divider {
+      margin: 1rem 0;
+    }
+  }
 </style>
 
 <div class="filter-section">
-  <h3 class="filter-title">カテゴリ</h3>
-  <div id="category-filters" class="filter-buttons"></div>
-
-  <h3 class="filter-title">タグ</h3>
-  <div id="tag-filters" class="filter-buttons"></div>
+  <!-- デスクトップ用：カテゴリボタン -->
+  <div class="category-buttons" id="category-buttons">
+    <!-- カテゴリボタンがここに表示されます -->
+  </div>
+  
+  <!-- モバイル用：カテゴリボタン -->
+  <div class="mobile-category-buttons" id="mobile-category-buttons">
+    <!-- カテゴリボタンがここに表示されます -->
+  </div>
+  
+  <div class="divider"></div>
+  
+  <!-- デスクトップ用：タグ表示 -->
+  <div class="popular-tags" id="popular-tags">
+    <!-- 人気タグがここに表示されます -->
+  </div>
+  
+  <!-- モバイル用：タグアコーディオン -->
+  <div class="tags-accordion">
+    <div class="tags-accordion-header" id="tags-accordion-header">
+      <span>タグ</span>
+      <span class="accordion-icon">▼</span>
+    </div>
+    <div class="tags-accordion-content" id="tags-accordion-content">
+      <div class="popular-tags" id="mobile-popular-tags">
+        <!-- モバイル用タグがここに表示されます -->
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="post-list"></div>
@@ -104,114 +318,200 @@ async function initFilter() {
   );
 
   // カテゴリーの表示順を指定
-  const categoryOrder = ['召された証し', '訓練生活の証し', '同労者の励まし', '八方面の証し'];
+  const categoryOrder = ['召された証し', '訓練生活の証し', '訓練の八つの方面', '良き地の展覧'];
   const allCategories = [...new Set(posts.flatMap(p => p.categories || []))];
   const categories = categoryOrder.filter(cat => allCategories.includes(cat));
   
-  const tags = [...new Set(posts.flatMap(p => p.tags || []))].sort();
+  // タグは動的に計算するため、ここでは初期化しない
 
-  const selected = { categories: new Set(['召された証し']), tags: new Set() };
+  const selected = { 
+    category: '召された証し', 
+    selectedTag: ''
+  };
   const postContainer = document.getElementById('post-list');
 
-  const createButton = (name, type, count) => {
-    const btn = document.createElement('button');
-    btn.textContent = `${name} (${count})`;
-    btn.className = 'filter-btn';
-    btn.onclick = () => toggleSelection(name, type, btn);
-    // デフォルト選択状態を反映
-    if (type === 'categories' && name === '召された証し') {
-      btn.classList.add('active');
-    }
-    return btn;
-  };
-
-  function renderButtons(containerId, list, type) {
-    const container = document.getElementById(containerId);
-    list.forEach(name => {
-      const count = posts.filter(p => (p[type] || []).includes(name)).length;
-      container.appendChild(createButton(name, type, count));
+  // カテゴリボタンを初期化
+  function initCategoryButtons() {
+    const categoryButtonsContainer = document.getElementById('category-buttons');
+    const mobileCategoryButtonsContainer = document.getElementById('mobile-category-buttons');
+    
+    // カテゴリとラベルのマッピング
+    const categoryLabels = {
+      '召された証し': '召し',
+      '訓練生活の証し': '訓練生活',
+      '訓練の八つの方面': '八つの面',
+      '良き地の展覧': '良き地'
+    };
+    
+    categories.forEach(category => {
+      const count = posts.filter(p => (p.categories || []).includes(category)).length;
+      const label = categoryLabels[category] || category;
+      
+      // デスクトップ用ボタン
+      const btn = document.createElement('button');
+      btn.textContent = `${label} (${count})`;
+      btn.className = 'category-btn';
+      
+      // デフォルトで「召された証し」を選択
+      if (category === '召された証し') {
+        btn.classList.add('active');
+      }
+      
+      btn.addEventListener('click', () => {
+        // 他のボタンのアクティブ状態をクリア
+        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+        
+        // 選択されたボタンをアクティブに
+        btn.classList.add('active');
+        selected.category = category;
+        selected.selectedTag = ''; // タグ選択をクリア
+        
+        // モバイル用ボタンも同期
+        document.querySelectorAll('.mobile-category-btn').forEach(b => {
+          if (b.dataset.category === category) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+        
+        updatePopularTags();
+        applyFilters();
+      });
+      
+      categoryButtonsContainer.appendChild(btn);
+      
+      // モバイル用ボタン
+      const mobileBtn = document.createElement('button');
+      mobileBtn.textContent = `${label} (${count})`;
+      mobileBtn.className = 'mobile-category-btn';
+      mobileBtn.dataset.category = category;
+      
+      // デフォルトで「召された証し」を選択
+      if (category === '召された証し') {
+        mobileBtn.classList.add('active');
+      }
+      
+      mobileBtn.addEventListener('click', () => {
+        // 他のボタンのアクティブ状態をクリア
+        document.querySelectorAll('.mobile-category-btn').forEach(b => b.classList.remove('active'));
+        
+        // 選択されたボタンをアクティブに
+        mobileBtn.classList.add('active');
+        selected.category = category;
+        selected.selectedTag = ''; // タグ選択をクリア
+        
+        // デスクトップ用ボタンも同期
+        document.querySelectorAll('.category-btn').forEach(b => {
+          if (b.textContent.includes(label)) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+        
+        updatePopularTags();
+        applyFilters();
+      });
+      
+      mobileCategoryButtonsContainer.appendChild(mobileBtn);
     });
   }
-
-  renderButtons('category-filters', categories, 'categories');
-  updateTagButtons();
   
-  // 初期表示時に「召された証し」でフィルタリング
+  // 人気タグを表示
+  function updatePopularTags() {
+    const popularTagsContainer = document.getElementById('popular-tags');
+    const mobilePopularTagsContainer = document.getElementById('mobile-popular-tags');
+    
+    // 両方のコンテナをクリア
+    popularTagsContainer.innerHTML = '';
+    mobilePopularTagsContainer.innerHTML = '';
+    
+    // 現在選択されているカテゴリでフィルタリング
+    let filteredPosts = posts;
+    if (selected.category) {
+      filteredPosts = posts.filter(p => (p.categories || []).includes(selected.category));
+    }
+    
+    // フィルタリングされた記事のタグを取得（使用頻度順でソート）
+    const availableTags = [...new Set(filteredPosts.flatMap(p => p.tags || []))];
+    
+    // タグの使用頻度を計算してソート
+    const tagCounts = {};
+    availableTags.forEach(tag => {
+      tagCounts[tag] = filteredPosts.filter(p => (p.tags || []).includes(tag)).length;
+    });
+    
+    const sortedTags = availableTags.sort((a, b) => tagCounts[b] - tagCounts[a]);
+    
+    sortedTags.forEach(tag => {
+      const count = tagCounts[tag];
+      
+      // デスクトップ用タグチップ
+      const chip = document.createElement('span');
+      chip.textContent = `${tag} (${count})`;
+      chip.className = 'tag-chip';
+      if (selected.selectedTag === tag) {
+        chip.classList.add('active');
+      }
+      
+      chip.addEventListener('click', () => {
+        selectTag(tag);
+      });
+      
+      popularTagsContainer.appendChild(chip);
+      
+      // モバイル用タグチップ
+      const mobileChip = document.createElement('span');
+      mobileChip.textContent = `${tag} (${count})`;
+      mobileChip.className = 'tag-chip';
+      if (selected.selectedTag === tag) {
+        mobileChip.classList.add('active');
+      }
+      
+      mobileChip.addEventListener('click', () => {
+        selectTag(tag);
+      });
+      
+      mobilePopularTagsContainer.appendChild(mobileChip);
+    });
+  }
+  
+  // アコーディオン機能を初期化
+  function initAccordion() {
+    const accordionHeader = document.getElementById('tags-accordion-header');
+    const accordionContent = document.getElementById('tags-accordion-content');
+    const accordionIcon = accordionHeader.querySelector('.accordion-icon');
+    
+    accordionHeader.addEventListener('click', () => {
+      const isOpen = accordionContent.classList.contains('open');
+      
+      if (isOpen) {
+        accordionContent.classList.remove('open');
+        accordionIcon.classList.remove('rotated');
+      } else {
+        accordionContent.classList.add('open');
+        accordionIcon.classList.add('rotated');
+      }
+    });
+  }
+  
+  // 初期化
+  initCategoryButtons();
+  updatePopularTags();
+  initAccordion();
+  
+  // 初期表示
   applyFilters();
 
-  function updateTagButtons() {
-    // カテゴリーで絞り込まれた記事を取得
-    let filteredPosts = posts;
-    if (selected.categories.size > 0) {
-      filteredPosts = posts.filter(p => 
-        [...selected.categories].every(c => (p.categories || []).includes(c))
-      );
-    }
-    
-    // 絞り込まれた記事が持っているタグだけを抽出
-    const availableTags = [...new Set(filteredPosts.flatMap(p => p.tags || []))].sort();
-    
-    // タグボタンを再レンダリング
-    const tagContainer = document.getElementById('tag-filters');
-    tagContainer.innerHTML = '';
-    availableTags.forEach(tag => {
-      const count = filteredPosts.filter(p => (p.tags || []).includes(tag)).length;
-      const btn = createButton(tag, 'tags', count);
-      if (selected.tags.has(tag)) {
-        btn.classList.add('active');
-      }
-      tagContainer.appendChild(btn);
-    });
-  }
-
-  function toggleSelection(name, type, btn) {
-    const set = selected[type];
-    
-    // カテゴリーの場合：選択解除を許可しない（常に1つ選択）
-    if (type === 'categories') {
-      if (set.has(name)) {
-        // 既に選択されている場合は何もしない
-        return;
-      }
-      // 他のすべてのボタンの選択を解除
-      set.clear();
-      document.querySelectorAll('#category-filters .filter-btn').forEach(b => {
-        b.classList.remove('active');
-      });
-      // 新しい選択を追加
-      set.add(name);
-      btn.classList.add('active');
-      
-      // タグの選択をクリアしてボタンを更新
-      selected.tags.clear();
-      updateTagButtons();
-    } else {
-      // タグの場合：選択解除可能
-      if (set.has(name)) {
-        set.delete(name);
-        btn.classList.remove('active');
-      } else {
-        set.clear();
-        document.querySelectorAll('#tag-filters .filter-btn').forEach(b => {
-          b.classList.remove('active');
-        });
-        set.add(name);
-        btn.classList.add('active');
-      }
-    }
-    
-    applyFilters();
-  }
 
   function applyFilters() {
     const filtered = posts.filter(p => {
-      // カテゴリーのフィルタ（単一選択）
-      const catMatch = selected.categories.size === 0 ||
-        [...selected.categories].every(c => (p.categories || []).includes(c));
+      // カテゴリーのフィルタ
+      const catMatch = !selected.category || (p.categories || []).includes(selected.category);
       
-      // タグのフィルタ（単一選択）
-      const tagMatch = selected.tags.size === 0 ||
-        [...selected.tags].every(t => (p.tags || []).includes(t));
+      // タグのフィルタ（選択されたタグのみ）
+      const tagMatch = !selected.selectedTag || (p.tags || []).includes(selected.selectedTag);
       
       return catMatch && tagMatch;
     });
@@ -268,15 +568,14 @@ async function initFilter() {
   
   function selectTag(tagName) {
     // タグを選択
-    selected.tags.clear();
-    selected.tags.add(tagName);
+    selected.selectedTag = tagName;
     
-    // タグボタンの状態を更新
-    document.querySelectorAll('#tag-filters .filter-btn').forEach(btn => {
-      if (btn.textContent.includes(tagName)) {
-        btn.classList.add('active');
+    // 人気タグの状態を更新
+    document.querySelectorAll('.tag-chip').forEach(chip => {
+      if (chip.textContent.includes(tagName)) {
+        chip.classList.add('active');
       } else {
-        btn.classList.remove('active');
+        chip.classList.remove('active');
       }
     });
     

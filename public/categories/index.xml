@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Categories on 東京全時間訓練</title><link>https://ftttk-org.github.io/categories/</link><description>Recent content in Categories on 東京全時間訓練</description><generator>Hugo -- 0.151.0</generator><language>ja</language><lastBuildDate>Tue, 30 Sep 2025 11:54:00 +0000</lastBuildDate><atom:link href="https://ftttk-org.github.io/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>良き地の展覧</title><link>https://ftttk-org.github.io/categories/%E8%89%AF%E3%81%8D%E5%9C%B0%E3%81%AE%E5%B1%95%E8%A6%A7/</link><pubDate>Tue, 30 Sep 2025 11:54:00 +0000</pubDate><guid>https://ftttk-org.github.io/categories/%E8%89%AF%E3%81%8D%E5%9C%B0%E3%81%AE%E5%B1%95%E8%A6%A7/</guid><description/></item><item><title>訓練の八つの方面</title><link>https://ftttk-org.github.io/categories/%E8%A8%93%E7%B7%B4%E3%81%AE%E5%85%AB%E3%81%A4%E3%81%AE%E6%96%B9%E9%9D%A2/</link><pubDate>Tue, 19 Aug 2025 06:46:33 +0000</pubDate><guid>https://ftttk-org.github.io/categories/%E8%A8%93%E7%B7%B4%E3%81%AE%E5%85%AB%E3%81%A4%E3%81%AE%E6%96%B9%E9%9D%A2/</guid><description/></item><item><title>同労者の励まし</title><link>https://ftttk-org.github.io/categories/%E5%90%8C%E5%8A%B4%E8%80%85%E3%81%AE%E5%8A%B1%E3%81%BE%E3%81%97/</link><pubDate>Fri, 15 Nov 2024 03:55:32 +0000</pubDate><guid>https://ftttk-org.github.io/categories/%E5%90%8C%E5%8A%B4%E8%80%85%E3%81%AE%E5%8A%B1%E3%81%BE%E3%81%97/</guid><description/></item><item><title>召された証し</title><link>https://ftttk-org.github.io/categories/%E5%8F%AC%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%BC%E3%81%97/</link><pubDate>Sun, 07 Nov 2021 11:32:00 +0000</pubDate><guid>https://ftttk-org.github.io/categories/%E5%8F%AC%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%BC%E3%81%97/</guid><description/></item><item><title>訓練生活の証し</title><link>https://ftttk-org.github.io/categories/%E8%A8%93%E7%B7%B4%E7%94%9F%E6%B4%BB%E3%81%AE%E8%A8%BC%E3%81%97/</link><pubDate>Wed, 14 Oct 2020 12:04:00 +0000</pubDate><guid>https://ftttk-org.github.io/categories/%E8%A8%93%E7%B7%B4%E7%94%9F%E6%B4%BB%E3%81%AE%E8%A8%BC%E3%81%97/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on 東京全時間訓練</title>
+    <link>http://localhost:54044/categories/</link>
+    <description>Recent content in Categories on 東京全時間訓練</description>
+    <generator>Hugo -- 0.151.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 30 Sep 2025 11:54:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:54044/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>良き地の展覧</title>
+      <link>http://localhost:54044/categories/%E8%89%AF%E3%81%8D%E5%9C%B0%E3%81%AE%E5%B1%95%E8%A6%A7/</link>
+      <pubDate>Tue, 30 Sep 2025 11:54:00 +0000</pubDate>
+      <guid>http://localhost:54044/categories/%E8%89%AF%E3%81%8D%E5%9C%B0%E3%81%AE%E5%B1%95%E8%A6%A7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>訓練の八つの面</title>
+      <link>http://localhost:54044/categories/%E8%A8%93%E7%B7%B4%E3%81%AE%E5%85%AB%E3%81%A4%E3%81%AE%E9%9D%A2/</link>
+      <pubDate>Tue, 19 Aug 2025 06:46:33 +0000</pubDate>
+      <guid>http://localhost:54044/categories/%E8%A8%93%E7%B7%B4%E3%81%AE%E5%85%AB%E3%81%A4%E3%81%AE%E9%9D%A2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>召された証し</title>
+      <link>http://localhost:54044/categories/%E5%8F%AC%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%BC%E3%81%97/</link>
+      <pubDate>Sun, 07 Nov 2021 11:32:00 +0000</pubDate>
+      <guid>http://localhost:54044/categories/%E5%8F%AC%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%BC%E3%81%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>訓練生活の証し</title>
+      <link>http://localhost:54044/categories/%E8%A8%93%E7%B7%B4%E7%94%9F%E6%B4%BB%E3%81%AE%E8%A8%BC%E3%81%97/</link>
+      <pubDate>Wed, 14 Oct 2020 12:04:00 +0000</pubDate>
+      <guid>http://localhost:54044/categories/%E8%A8%93%E7%B7%B4%E7%94%9F%E6%B4%BB%E3%81%AE%E8%A8%BC%E3%81%97/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>同労者の励まし</title>
+      <link>http://localhost:54044/categories/%E5%90%8C%E5%8A%B4%E8%80%85%E3%81%AE%E5%8A%B1%E3%81%BE%E3%81%97/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:54044/categories/%E5%90%8C%E5%8A%B4%E8%80%85%E3%81%AE%E5%8A%B1%E3%81%BE%E3%81%97/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
