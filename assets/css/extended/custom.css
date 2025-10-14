@@ -134,6 +134,144 @@ h6 .anchor,
     border-color: var(--purple-primary) !important;
 }
 
+/* 目立つ背景スタイル */
+.post-entry--featured {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%) !important;
+    border: 2px solid var(--purple-primary) !important;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2) !important;
+    position: relative;
+}
+
+.post-entry--featured::before {
+    content: "★ 注目";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.post-entry--urgent {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%) !important;
+    border: 2px solid #ef4444 !important;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.2) !important;
+    position: relative;
+}
+
+.post-entry--urgent::before {
+    content: "🚨 緊急";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: #ef4444;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.post-entry--important {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(217, 119, 6, 0.1) 100%) !important;
+    border: 2px solid #f59e0b !important;
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.2) !important;
+    position: relative;
+}
+
+.post-entry--important::before {
+    content: "⚠️ 重要";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: #f59e0b;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.post-entry--notice {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%) !important;
+    border: 2px solid #3b82f6 !important;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2) !important;
+    position: relative;
+}
+
+.post-entry--notice::before {
+    content: "📢 お知らせ";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: #3b82f6;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.post-entry--success {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%) !important;
+    border: 2px solid #22c55e !important;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.2) !important;
+    position: relative;
+}
+
+.post-entry--success::before {
+    content: "✅ 完了";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: #22c55e;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.post-entry--warning {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%) !important;
+    border: 2px solid #fbbf24 !important;
+    box-shadow: 0 4px 16px rgba(251, 191, 36, 0.2) !important;
+    position: relative;
+}
+
+.post-entry--warning::before {
+    content: "⚠️ 注意";
+    position: absolute;
+    top: -8px;
+    right: 10px;
+    background: #fbbf24;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+/* 目立つ背景のホバー効果 */
+.post-entry--featured:hover,
+.post-entry--urgent:hover,
+.post-entry--important:hover,
+.post-entry--notice:hover,
+.post-entry--success:hover,
+.post-entry--warning:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
 /* リンクの色 */
 a {
     color: var(--purple-primary);

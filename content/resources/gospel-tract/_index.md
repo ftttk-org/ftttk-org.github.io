@@ -1,7 +1,7 @@
 ---
 title: "福音トラクト"
 description: "訓練で使用されている福音トラクトの一覧。自由にダウンロードしてご利用いただけます。"
-weight: 10
+weight: 2
 layout: "resources/gospel-tract/list"
 sections:
   - name: "人生の奥義"

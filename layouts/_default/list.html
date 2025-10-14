@@ -88,6 +88,24 @@
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
+{{/* 目立つ背景の設定 */}}
+{{- $highlightStyle := .Param "highlight" | default "" }}
+{{- if $highlightStyle }}
+  {{- if eq $highlightStyle "featured" }}
+    {{- $class = printf "%s post-entry--featured" $class }}
+  {{- else if eq $highlightStyle "urgent" }}
+    {{- $class = printf "%s post-entry--urgent" $class }}
+  {{- else if eq $highlightStyle "important" }}
+    {{- $class = printf "%s post-entry--important" $class }}
+  {{- else if eq $highlightStyle "notice" }}
+    {{- $class = printf "%s post-entry--notice" $class }}
+  {{- else if eq $highlightStyle "success" }}
+    {{- $class = printf "%s post-entry--success" $class }}
+  {{- else if eq $highlightStyle "warning" }}
+    {{- $class = printf "%s post-entry--warning" $class }}
+  {{- end }}
+{{- end }}
+
 <article class="{{ $class }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}

@@ -1,9 +1,0 @@
-# Hugo build configuration for GitHub Pages
-# (https://gohugo.io/hosting-and-deployment/hosting-on-github-pages/)
-
-[build]
-command = "hugo --minify"
-publish = "public"
-
-[context.production]
-command = "hugo --minify"
