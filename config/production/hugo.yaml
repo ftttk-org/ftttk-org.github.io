@@ -1,0 +1,9 @@
+# Production environment configuration
+# 本番サーバー用設定 (ftttk.org)
+
+baseURL: "https://ftttk.org/"
+
+# 本番環境ではstaticディレクトリのみ使用（CNAMEファイルを含めない）
+staticDir:
+  - static
+

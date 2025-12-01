@@ -4,15 +4,12 @@
         {{- $categories := .Params.categories | default slice -}}
         {{- $tags := .Params.tags | default slice -}}
         {{- $.Scratch.Add "index" (dict 
-            "Title" .Title 
+            "title" .Title 
+            "date" .Date
             "content" .Plain 
-            "RelPermalink" .RelPermalink 
             "permalink" .Permalink 
-            "Summary" .Summary
-            "Params" (dict 
-                "categories" $categories
-                "tags" $tags
-            )
+            "categories" $categories
+            "tags" $tags
         ) -}}
     {{- end -}}
 {{- end -}}

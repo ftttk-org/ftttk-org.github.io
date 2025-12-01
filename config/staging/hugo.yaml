@@ -1,0 +1,10 @@
+# Staging environment configuration  
+# テストサーバー用設定 (GitHub Pages)
+
+baseURL: "https://tkhugo.amana.top/"
+
+# GitHub Pages用にCNAMEファイルを含める
+staticDir:
+  - static
+  - static-staging
+

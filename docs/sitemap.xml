@@ -2,305 +2,305 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/resources/videos/</loc>
+    <loc>http://localhost:56195/resources/videos/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/special-short-term/</loc>
+    <loc>http://localhost:56195/admission/special-short-term/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resources/gospel-tract/</loc>
+    <loc>http://localhost:56195/resources/gospel-tract/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resources/sister-schools/</loc>
+    <loc>http://localhost:56195/resources/sister-schools/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/full-time/</loc>
+    <loc>http://localhost:56195/admission/full-time/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/hisotry/</loc>
+    <loc>http://localhost:56195/about/hisotry/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
+    <loc>http://localhost:56195/testimonies/calling/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/short-term/</loc>
+    <loc>http://localhost:56195/admission/short-term/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resources/trainee-report/</loc>
+    <loc>http://localhost:56195/resources/trainee-report/</loc>
     <lastmod>2025-10-13T11:13:25+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/eight-aspects/</loc>
+    <loc>http://localhost:56195/about/eight-aspects/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:56195/testimonies/good-land/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:56195/about/classes/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/good-land/</loc>
+    <loc>http://localhost:56195/about/training-life/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/classes/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
+    <loc>http://localhost:56195/testimonies/training-life/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/training-life/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/admission/encouragement-for-applicants/</loc>
+    <loc>http://localhost:56195/admission/encouragement-for-applicants/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/encouragement-for-current-students/</loc>
+    <loc>http://localhost:56195/admission/encouragement-for-current-students/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resources/trainee-report/2024/</loc>
+    <loc>http://localhost:56195/resources/trainee-report/2024/</loc>
     <lastmod>2025-10-14T12:52:27+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resources/trainee-report/2025/</loc>
+    <loc>http://localhost:56195/resources/trainee-report/2025/</loc>
     <lastmod>2025-10-13T11:13:25+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/21%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/21%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2025-11-30T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:56195/categories/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:56195/tags/</loc>
     <lastmod>2025-11-30T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:56195/tags/%E5%85%84%E5%BC%9F/</loc>
     <lastmod>2025-11-30T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%85%84%E5%BC%9F/</loc>
+    <loc>http://localhost:56195/testimonies/good-land/transcend-the-barriers-and-join-the-flow-of-the-one-body/</loc>
     <lastmod>2025-11-30T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/good-land/transcend-the-barriers-and-join-the-flow-of-the-one-body/</loc>
-    <lastmod>2025-11-30T00:00:00+09:00</lastmod>
+    <loc>http://localhost:56195/categories/%E8%89%AF%E3%81%8D%E5%9C%B0%E3%81%AE%E5%B1%95%E8%A6%A7/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/%E8%89%AF%E3%81%8D%E5%9C%B0%E3%81%AE%E5%B1%95%E8%A6%A7/</loc>
-    <lastmod>2025-11-30T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/testimonies/good-land/god-who-works-in-us/</loc>
+    <loc>http://localhost:56195/testimonies/good-land/god-who-works-in-us/</loc>
     <lastmod>2025-09-30T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%BF%97/</loc>
+    <loc>http://localhost:56195/tags/%E5%BF%97/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E7%9C%9F%E7%90%86/</loc>
+    <loc>http://localhost:56195/tags/%E7%9C%9F%E7%90%86/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%8B%99%E3%82%81/</loc>
+    <loc>http://localhost:56195/tags/%E5%8B%99%E3%82%81/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%91%BD/</loc>
+    <loc>http://localhost:56195/tags/%E5%91%BD/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/20-sister-on-vision/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/20-sister-on-vision/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/truth-01/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/truth-01/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/ministry-01/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/ministry-01/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/life-02/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/life-02/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/20%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/20%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/%E8%A8%93%E7%B7%B4%E3%81%AE%E5%85%AB%E3%81%A4%E3%81%AE%E9%9D%A2/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
+    <loc>http://localhost:56195/categories/%E8%A8%93%E7%B7%B4%E3%81%AE%E5%85%AB%E3%81%A4%E3%81%AE%E9%9D%A2/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%A7%89%E5%A6%B9/</loc>
+    <loc>http://localhost:56195/tags/%E5%A7%89%E5%A6%B9/</loc>
     <lastmod>2025-08-19T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E3%81%8B%E3%82%89%E3%81%A0%E3%81%8B%E3%82%89%E3%81%A0%E3%81%AE%E6%84%9F%E8%A6%9A%E3%81%AE%E4%B8%AD%E3%81%A7%E7%94%9F%E3%81%8D%E3%82%8B/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E3%81%8B%E3%82%89%E3%81%A0%E3%81%8B%E3%82%89%E3%81%A0%E3%81%AE%E6%84%9F%E8%A6%9A%E3%81%AE%E4%B8%AD%E3%81%A7%E7%94%9F%E3%81%8D%E3%82%8B/</loc>
     <lastmod>2025-08-06T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/vision-01/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/vision-01/</loc>
     <lastmod>2025-08-06T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/life-01/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/life-01/</loc>
     <lastmod>2025-08-06T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E3%81%8B%E3%82%89%E3%81%A0/</loc>
+    <loc>http://localhost:56195/tags/%E3%82%AD%E3%83%AA%E3%82%B9%E3%83%88%E3%81%AE%E3%81%8B%E3%82%89%E3%81%A0/</loc>
     <lastmod>2025-08-06T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/16%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/16%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2021-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/16-brother-k/</loc>
+    <loc>http://localhost:56195/testimonies/calling/16-brother-k/</loc>
     <lastmod>2021-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/%E5%8F%AC%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%BC%E3%81%97/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
+    <loc>http://localhost:56195/categories/%E5%8F%AC%E3%81%95%E3%82%8C%E3%81%9F%E8%A8%BC%E3%81%97/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/16-sister-n/</loc>
+    <loc>http://localhost:56195/testimonies/calling/16-sister-n/</loc>
     <lastmod>2021-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/16-sister-m/</loc>
+    <loc>http://localhost:56195/testimonies/calling/16-sister-m/</loc>
     <lastmod>2021-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/18%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/18%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2021-10-22T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/18-sister-a/</loc>
+    <loc>http://localhost:56195/testimonies/calling/18-sister-a/</loc>
     <lastmod>2021-10-22T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/13%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/13%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2021-02-04T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/13-brother-s/</loc>
+    <loc>http://localhost:56195/testimonies/calling/13-brother-s/</loc>
     <lastmod>2021-02-04T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/15%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/15%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2020-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/15-brother-w/</loc>
+    <loc>http://localhost:56195/testimonies/calling/15-brother-w/</loc>
     <lastmod>2020-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/%E8%A8%93%E7%B7%B4%E7%94%9F%E6%B4%BB%E3%81%AE%E8%A8%BC%E3%81%97/</loc>
-    <lastmod>2025-10-13T10:17:13+09:00</lastmod>
+    <loc>http://localhost:56195/categories/%E8%A8%93%E7%B7%B4%E7%94%9F%E6%B4%BB%E3%81%AE%E8%A8%BC%E3%81%97/</loc>
+    <lastmod>2025-12-01T11:42:52+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/152n4/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/152n4/</loc>
     <lastmod>2020-10-14T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/162g/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/162g/</loc>
     <lastmod>2020-09-13T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/15-sister-m-2/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/15-sister-m-2/</loc>
     <lastmod>2020-09-12T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/152n-2/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/152n-2/</loc>
     <lastmod>2020-09-11T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/161k-2/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/161k-2/</loc>
     <lastmod>2020-09-10T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/16-sister-n-on-truth/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/16-sister-n-on-truth/</loc>
     <lastmod>2020-09-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/16-sister-g/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/16-sister-g/</loc>
     <lastmod>2020-08-18T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E7%A6%8F%E9%9F%B3/</loc>
+    <loc>http://localhost:56195/tags/%E7%A6%8F%E9%9F%B3/</loc>
     <lastmod>2020-08-18T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/lords-speaking-in-the-online-training-15-sister-k/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/lords-speaking-in-the-online-training-15-sister-k/</loc>
     <lastmod>2020-07-22T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/15-sister-n-on-prophesy-draft/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/15-sister-n-on-prophesy-draft/</loc>
     <lastmod>2019-12-10T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/15-sister-m/</loc>
+    <loc>http://localhost:56195/testimonies/calling/15-sister-m/</loc>
     <lastmod>2019-12-04T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/15-brother-w/</loc>
+    <loc>http://localhost:56195/testimonies/calling/15-brother-w/</loc>
     <lastmod>2019-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/131s/</loc>
+    <loc>http://localhost:56195/testimonies/calling/131s/</loc>
     <lastmod>2019-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/15-sister-k/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/15-sister-k/</loc>
     <lastmod>2019-10-31T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/13-brother-s/</loc>
+    <loc>http://localhost:56195/testimonies/calling/13-brother-s/</loc>
     <lastmod>2019-10-31T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/152n-3/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/152n-3/</loc>
     <lastmod>2019-10-31T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/15-sister-w-on-exam/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/15-sister-w-on-exam/</loc>
     <lastmod>2019-10-22T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/eight-aspects/15-sister-n/</loc>
+    <loc>http://localhost:56195/testimonies/eight-aspects/15-sister-n/</loc>
     <lastmod>2019-09-27T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/152a/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/152a/</loc>
     <lastmod>2019-08-18T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/15-sister-m-on-asking-god/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/15-sister-m-on-asking-god/</loc>
     <lastmod>2019-08-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/152n-6/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/152n-6/</loc>
     <lastmod>2019-03-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/141o-2/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/141o-2/</loc>
     <lastmod>2018-09-15T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/14%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/14%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2018-08-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/14-brother-o/</loc>
+    <loc>http://localhost:56195/testimonies/calling/14-brother-o/</loc>
     <lastmod>2018-08-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/17%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/17%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2018-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/17-sister-t/</loc>
+    <loc>http://localhost:56195/testimonies/calling/17-sister-t/</loc>
     <lastmod>2018-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/17-sister-o/</loc>
+    <loc>http://localhost:56195/testimonies/calling/17-sister-o/</loc>
     <lastmod>2018-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/9%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/9%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2017-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/9-brother-t/</loc>
+    <loc>http://localhost:56195/testimonies/calling/9-brother-t/</loc>
     <lastmod>2017-11-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/16-sister-m/</loc>
+    <loc>http://localhost:56195/testimonies/calling/16-sister-m/</loc>
     <lastmod>2017-06-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E7%9F%AD%E6%9C%9F%E8%A8%93%E7%B7%B4%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/%E7%9F%AD%E6%9C%9F%E8%A8%93%E7%B7%B4%E7%94%9F/</loc>
     <lastmod>2016-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/training-life/a-working-sister/</loc>
+    <loc>http://localhost:56195/testimonies/training-life/a-working-sister/</loc>
     <lastmod>2016-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/61/</loc>
+    <loc>http://localhost:56195/testimonies/calling/61/</loc>
     <lastmod>2015-04-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/%E5%8C%BF%E5%90%8D/</loc>
+    <loc>http://localhost:56195/tags/%E5%8C%BF%E5%90%8D/</loc>
     <lastmod>2015-04-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/11%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/11%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2013-09-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/11-sister-i/</loc>
+    <loc>http://localhost:56195/testimonies/calling/11-sister-i/</loc>
     <lastmod>2013-09-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/10%E6%9C%9F%E7%94%9F/</loc>
+    <loc>http://localhost:56195/tags/10%E6%9C%9F%E7%94%9F/</loc>
     <lastmod>2012-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/10-sister-y/</loc>
+    <loc>http://localhost:56195/testimonies/calling/10-sister-y/</loc>
     <lastmod>2012-07-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/11-sister-o/</loc>
+    <loc>http://localhost:56195/testimonies/calling/11-sister-o/</loc>
     <lastmod>2012-03-07T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/resources/</loc>
+    <loc>http://localhost:56195/resources/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/encouragement-for-current-students/words-from-brother-ron/</loc>
+    <loc>http://localhost:56195/admission/encouragement-for-current-students/words-from-brother-ron/</loc>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:56195/about/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/</loc>
+    <loc>http://localhost:56195/admission/</loc>
     <lastmod>2025-10-13T10:17:13+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/brothers/</loc>
+    <loc>http://localhost:56195/tags/brothers/</loc>
   </url><url>
-    <loc>http://localhost:1313/testimonies/</loc>
+    <loc>http://localhost:56195/testimonies/</loc>
     <lastmod>2025-10-12T08:29:21+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/admission/encouragement-for-current-students/words-from-brother-wu/</loc>
+    <loc>http://localhost:56195/admission/encouragement-for-current-students/words-from-brother-wu/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/sisters/</loc>
+    <loc>http://localhost:56195/tags/sisters/</loc>
   </url><url>
-    <loc>http://localhost:1313/testimonies/calling/17-sister-e/</loc>
+    <loc>http://localhost:56195/testimonies/calling/17-sister-e/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:56195/</loc>
     <lastmod>2025-10-14T13:07:42+09:00</lastmod>
   </url>
 </urlset>
