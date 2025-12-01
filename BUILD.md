@@ -1,18 +1,35 @@
 # ビルド方法
 
-このプロジェクトは、テスト環境（GitHub Pages）と本番環境（ftttk.org）で異なる設定を使用します。
+このプロジェクトは、**Staging（GitHub Pages）** と **Production（本番サーバー）** で異なる環境を使用しています。
+
+## 📁 ビルド先フォルダ
+
+```
+docs/   → Staging専用（GitHub Pages）
+          Gitにコミット・プッシュする
+          
+public/ → Production専用（本番サーバー）
+          Gitにコミットしない（.gitignoreに含まれる）
+          FTPで手動アップロード
+```
 
 ## 環境別設定
 
-### テスト環境（GitHub Pages）
-- **URL**: https://tkhugo.amana.top/
-- **CNAME**: 含む
+### Staging環境（GitHub Pages: tkhugo.amana.top）
+- **設定ファイル**: `config/staging/hugo.yaml`
+- **Base URL**: `https://tkhugo.amana.top/`
+- **ビルド先**: `docs/`
+- **CNAMEファイル**: 含む
 - **用途**: 開発・テスト
 
-### 本番環境（ftttk.org）
-- **URL**: https://ftttk.org/
-- **CNAME**: 含まない
+### Production環境（本番サーバー: ftttk.org）
+- **設定ファイル**: `config/production/hugo.yaml`
+- **Base URL**: `https://ftttk.org/`
+- **ビルド先**: `public/`
+- **CNAMEファイル**: 含まない
 - **用途**: 一般公開
+
+---
 
 ## ビルド方法
 
@@ -22,15 +39,10 @@
 ./build-staging.sh
 ```
 
-または
-
-```bash
-hugo --gc --minify --environment staging
-```
-
 このコマンドは：
 - `baseURL` を `https://tkhugo.amana.top/` に設定
 - `CNAME` ファイルを `docs/` に含める
+- `docs/` フォルダにビルド
 - GitHub Pagesへのデプロイ用
 
 ### 本番サーバー用（ftttk.org）
@@ -39,20 +51,23 @@ hugo --gc --minify --environment staging
 ./build-production.sh
 ```
 
-または
+または、検証付きの推奨スクリプト：
 
 ```bash
-hugo --gc --minify --environment production
+./deploy-to-production.sh
 ```
 
 このコマンドは：
 - `baseURL` を `https://ftttk.org/` に設定
 - `CNAME` ファイルを含めない
+- `public/` フォルダにビルド
 - 本番サーバーへのアップロード用
+
+---
 
 ## デプロイフロー
 
-### GitHub Pages（テスト）へのデプロイ
+### Staging（GitHub Pages）へのデプロイ
 
 ```bash
 # 1. Staging用にビルド
@@ -60,11 +75,13 @@ hugo --gc --minify --environment production
 
 # 2. コミット＆プッシュ
 git add -A
-git commit -m "Build for staging"
-git push origin public-build-2
+git commit -m "Update content for staging"
+git push origin main
 ```
 
-### 本番サーバー（ftttk.org）へのデプロイ
+数分後に https://tkhugo.amana.top/ で確認できます。
+
+### Production（本番サーバー）へのデプロイ
 
 #### 方法1: 半自動デプロイ（推奨）
 
@@ -74,11 +91,11 @@ git push origin public-build-2
 ```
 
 このスクリプトが：
-1. Production用にビルド
+1. Production用にビルド（`public/` フォルダに出力）
 2. 内容を検証（baseURL, CNAMEの有無など）
 3. 次の手順を表示
 
-その後、FTPクライアントで `docs/` の**中身**を本番サーバーにアップロード。
+その後、FTPクライアントで `public/` の**中身**を本番サーバーにアップロード。
 
 #### 方法2: 手動ビルド
 
@@ -86,11 +103,13 @@ git push origin public-build-2
 # 1. Production用にビルド
 ./build-production.sh
 
-# 2. docsフォルダの中身を本番サーバーにアップロード
+# 2. publicフォルダの中身を本番サーバーにアップロード
 # (FTP, rsync, またはお使いのデプロイツールを使用)
 ```
 
-**重要**: `docs` フォルダ自体ではなく、**中身**をサーバーのルートにアップロードしてください。
+**重要**: `public` フォルダ自体ではなく、**中身**をサーバーのルートにアップロードしてください。
+
+---
 
 ## ローカル開発
 
@@ -103,6 +122,8 @@ hugo server -D --environment staging
 hugo server -D --environment production
 ```
 
+---
+
 ## ディレクトリ構造
 
 ```
@@ -114,11 +135,33 @@ config/
 
 static/            # 共通の静的ファイル
 static-staging/    # GitHub Pages専用ファイル（CNAME）
+
+docs/              # Staging用ビルド出力（Gitで管理）
+public/            # Production用ビルド出力（Gitで管理しない）
 ```
+
+---
 
 ## 注意事項
 
 - `hugo.yaml` はベース設定（共通設定）
 - 環境別設定は `config/<environment>/hugo.yaml` で上書き
 - CNAMEファイルはGitHub Pages専用（本番ビルドには含まれない）
+- `docs/` はGitで管理、`public/` は `.gitignore` で除外
 
+---
+
+## トラブルシューティング
+
+### Stagingが更新されない
+
+1. ビルドコマンドを確認: `./build-staging.sh`
+2. Gitにコミット・プッシュ: `git push origin main`
+3. GitHub Actionsの状態を確認
+4. ブラウザのキャッシュをクリア: `Cmd+Shift+R` (Mac)
+
+### 本番サーバーでリンクが壊れる
+
+- `public/` フォルダでビルドしたか確認
+- BaseURLが `https://ftttk.org/` になっているか確認
+- FTPで上書きアップロードできているか確認
