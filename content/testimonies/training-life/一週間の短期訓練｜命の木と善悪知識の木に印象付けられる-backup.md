@@ -1,12 +1,12 @@
 ---
+title: 命の木と善悪知識の木に印象付けられる
+slug: a-working-sister
+date: '2016-07-07'
 categories:
 - 訓練生活の証し
-date: '2016-07-07T10:40:00+00:00'
 tags:
 - 短期訓練生
 - 姉妹
-title: 命の木と善悪知識の木に印象付けられる
-slug: a-working-sister
 ---
 ### 命の木の路線
 

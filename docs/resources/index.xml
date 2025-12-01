@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>リソース on 東京全時間訓練</title>
-    <link>http://localhost:1314/resources/</link>
+    <link>http://localhost:1313/resources/</link>
     <description>Recent content in リソース on 東京全時間訓練</description>
     <generator>Hugo -- 0.151.0</generator>
     <language>ja</language>
-    <atom:link href="http://localhost:1314/resources/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/resources/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>姉妹校の紹介</title>
-      <link>http://localhost:1314/resources/sister-schools/</link>
+      <link>http://localhost:1313/resources/sister-schools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1314/resources/sister-schools/</guid>
+      <guid>http://localhost:1313/resources/sister-schools/</guid>
       <description>世界各地にある姉妹校の紹介。台北、マラボン、ソウル、アナハイム、ハミルトン、ロンドンの訓練センターへのリンク。</description>
     </item>
   </channel>

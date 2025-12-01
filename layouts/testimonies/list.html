@@ -16,7 +16,7 @@
         <a href="/testimonies/" class="breadcrumb-link">恵みの証し</a>
       </li>
       {{- if ne .RelPermalink "/testimonies/" }}
-        {{- $categoryLabels := dict "calling" "召された証し" "training-life" "訓練生活の証し" "eight-aspects" "訓練の八つの方面" "good-land" "良き地の展覧" }}
+        {{- $categoryLabels := dict "calling" "召された証し" "training-life" "訓練生活の証し" "eight-aspects" "訓練の八つの面" "good-land" "良き地の展覧" }}
         {{- $categoryLabel := index $categoryLabels .Section | default .Title }}
         <li class="breadcrumb-item breadcrumb-current" aria-current="page">{{ $categoryLabel }}</li>
       {{- end }}

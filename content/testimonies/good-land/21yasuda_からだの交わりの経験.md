@@ -1,7 +1,7 @@
 ---
 title: 'からだの交わりを通して願わせ働かれる神 ― ピリピ2:13の経験'
-date: '2025-09-30T11:54:00+00:00'
 slug: god-who-works-in-us
+date: '2025-09-30'
 categories:
 - 良き地の展覧
 tags:

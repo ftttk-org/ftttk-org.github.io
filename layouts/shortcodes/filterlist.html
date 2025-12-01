@@ -167,6 +167,16 @@
     border: none;
     padding-top: 0;
   }
+  .post-date {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    background: #f3f4f6;
+    border-radius: 4px;
+    color: #6b7280;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-right: 0.3rem;
+  }
   .post-tag-btn {
     display: inline-block;
     padding: 0.15rem 0.5rem;
@@ -244,6 +254,16 @@
       padding: 0.1rem 0.4rem;
     }
     
+    .post-date {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+    }
+    
+    .post-tag-btn {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+    }
+    
     .filter-section {
       padding: 0.8rem;
     }
@@ -265,6 +285,16 @@
     }
     
     .tag-chip {
+      font-size: 0.6rem;
+      padding: 0.08rem 0.3rem;
+    }
+    
+    .post-date {
+      font-size: 0.6rem;
+      padding: 0.08rem 0.35rem;
+    }
+    
+    .post-tag-btn {
       font-size: 0.6rem;
       padding: 0.08rem 0.3rem;
     }
@@ -318,14 +348,14 @@ async function initFilter() {
   );
 
   // カテゴリーの表示順を指定
-  const categoryOrder = ['召された証し', '訓練生活の証し', '訓練の八つの方面', '良き地の展覧'];
+  const categoryOrder = ['良き地の展覧', '訓練生活の証し', '訓練の八つの面', '召された証し'];
   const allCategories = [...new Set(posts.flatMap(p => p.categories || []))];
   const categories = categoryOrder.filter(cat => allCategories.includes(cat));
   
   // タグは動的に計算するため、ここでは初期化しない
 
   const selected = { 
-    category: '召された証し', 
+    category: '良き地の展覧', 
     selectedTag: ''
   };
   const postContainer = document.getElementById('post-list');
@@ -339,7 +369,7 @@ async function initFilter() {
     const categoryLabels = {
       '召された証し': '召し',
       '訓練生活の証し': '訓練生活',
-      '訓練の八つの方面': '八つの面',
+      '訓練の八つの面': '八つの面',
       '良き地の展覧': '良き地'
     };
     
@@ -352,8 +382,8 @@ async function initFilter() {
       btn.textContent = `${label} (${count})`;
       btn.className = 'category-btn';
       
-      // デフォルトで「召された証し」を選択
-      if (category === '召された証し') {
+      // デフォルトで「良き地の展覧」を選択
+      if (category === '良き地の展覧') {
         btn.classList.add('active');
       }
       
@@ -387,8 +417,8 @@ async function initFilter() {
       mobileBtn.className = 'mobile-category-btn';
       mobileBtn.dataset.category = category;
       
-      // デフォルトで「召された証し」を選択
-      if (category === '召された証し') {
+      // デフォルトで「良き地の展覧」を選択
+      if (category === '良き地の展覧') {
         mobileBtn.classList.add('active');
       }
       
@@ -543,11 +573,25 @@ async function initFilter() {
       titleLink.textContent = p.title;
       div.appendChild(titleLink);
       
+      // メタ情報（日付とタグ）
+      const metaContainer = document.createElement('div');
+      metaContainer.className = 'post-meta';
+      
+      // 投稿日
+      if (p.date) {
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'post-date';
+        // 日付をフォーマット (YYYY-MM-DD)
+        const date = new Date(p.date);
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        dateSpan.textContent = `${year}-${month}-${day}`;
+        metaContainer.appendChild(dateSpan);
+      }
+      
       // タグ（クリック可能）
       if (p.tags && p.tags.length > 0) {
-        const tagContainer = document.createElement('div');
-        tagContainer.className = 'post-meta';
-        
         p.tags.forEach((tag, index) => {
           const tagBtn = document.createElement('button');
           tagBtn.textContent = '#' + tag;
@@ -556,11 +600,11 @@ async function initFilter() {
             e.preventDefault();
             selectTag(tag);
           };
-          tagContainer.appendChild(tagBtn);
+          metaContainer.appendChild(tagBtn);
         });
-        
-        div.appendChild(tagContainer);
       }
+      
+      div.appendChild(metaContainer);
       
       postContainer.appendChild(div);
     });
